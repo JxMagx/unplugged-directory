@@ -96,8 +96,8 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  background: palegreen;
-  /* Remove background color when ready to publish, makes it easier to see media query widths */
+  color: #e2e3ed;
+  text-align: left;
 }
 
 ul,
@@ -113,12 +113,14 @@ a {
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
 }
 
 h3,
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
+  font-weight: 500;
   margin: 20px 0;
 }
 
@@ -144,6 +146,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #202322;
 }
 
 
@@ -164,7 +167,7 @@ header .content-wrapper {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
-  background: #888;
+  background: #3a3a3a;
 }
 
 header nav {
@@ -173,6 +176,9 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul {
@@ -181,10 +187,14 @@ header nav ul {
   width: 100%;
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
 
 /*-- Footer --*/
 footer {
   flex-direction: column;
+  text-align: center;
 }
 
 footer p {
@@ -228,6 +238,13 @@ justify-content: center;
 flex-flow: row wrap;
 }
 
+.hero-area h1 {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-size: 2.25em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
 
 /*-- Aside --*/
 aside {
@@ -235,7 +252,35 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
+
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 
 
 /*-- Features --*/
@@ -249,7 +294,7 @@ aside {
   margin-bottom: 60px;
 }
 
-.features-items {
+.features .features-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,6 +308,7 @@ aside {
 
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 /*-- Reviews --*/
@@ -270,10 +316,12 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1em;
 }
 
 .reviews h3 {
@@ -291,6 +339,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 .faq .content-wrapper {
@@ -303,10 +352,15 @@ aside {
 
 .faq h2 {
   margin-bottom: 40px;
+  line-height: 1em;
 }
 
 .faq-content {
   margin-bottom: 50px;
+}
+
+.faq-content h4 {
+  line-height: 1.333em;
 }
 
 
@@ -317,6 +371,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
 
 .contact-section {
@@ -324,6 +379,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .contact-content p {
@@ -418,12 +474,8 @@ margin: 0;
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-/* Tablet styles here */
 
-body {
-  background: palegoldenrod;
-  /* Remove background color when ready to publish, makes it easier to see media query widths */
-}
+/* Tablet styles here */
 
 /* General styles */
 .content-wrapper {
@@ -431,10 +483,21 @@ body {
   margin: 100px 0;
 }
 
+h2 {
+  font-size: 2.25em;
+  line-height: 1.333em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+
 /* Header */
 header {
   justify-content: space-around;
-  padding: 30px 0;
+  padding: 33px 0;
 }
 
 header .content-wrapper {
@@ -454,8 +517,15 @@ header nav ul {
   justify-content: space-between;
 }
 
+
 /* Hero Area */
- 
+.hero-area h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0;
+} 
+
+
 /* Aside */
 aside .content-wrapper {
   display: flex;
@@ -470,7 +540,12 @@ aside .content-wrapper .form {
   margin: 0;
 }
 
+
 /* Features */
+.features h2 {
+  margin-bottom: 20px;
+}
+
 .features article {
   display: flex;
   justify-content: center;
@@ -483,15 +558,26 @@ aside .content-wrapper .form {
   width: 62%;
 }
 
+
 /* Reviews */
 .reviews article {
   display: flex;
   justify-content: space-between;
 }
 
+.reviews h2 {
+  width: 85%;
+}
+
 .reviews article div {
   width: 49%;
 }
+
+.reviews h3 {
+  width: 75%;
+  margin: 0;
+}
+
 
 /* Footer */
 footer .content-wrapper {
@@ -499,10 +585,19 @@ footer .content-wrapper {
   margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+footer p {
+  line-height: 1.285em;
 }
 
 footer .contact {
@@ -528,6 +623,12 @@ footer .copyright {
   flex-basis: 45%;
 }
 
+.faq h4, 
+.faq p {
+  font-size: 0.875em;
+  line-height: 1.125em;
+}
+
 
 /*------------------------- About ----------------------------*/
 .mission-content {
@@ -551,13 +652,18 @@ footer .copyright {
   align-items: flex-start;
 }
 
+.contact-content h4 {
+  font-size: 1.5em;
+}
+
 }
 
 @media only screen and (min-width: 1200px) {
   /* Desktop styles here */
-body {
-  background: powderblue;
-  /* Remove background color when ready to publish, makes it easier to see media query widths */ 
+
+/* Header */
+header {
+  padding: 15px 0;
 }
 
 /* General styles */
@@ -565,11 +671,24 @@ body {
   max-width: 960px;
 }
 
-/* Header */
+h2 {
+  font-size: 2.25em;
+}
+
+h3,
+h4 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.333;
+}
 
 /* Hero Area */
  .hero-area h1 {
    width: 60%;
+   font-size: 3.75em;
  }
 
 /* Aside */
@@ -592,19 +711,42 @@ aside .content-wrapper .form {
 }
 
 /* Reviews */
+.reviews h2 {
+  padding-bottom: 50px;
+}
+
 .reviews article div {
   width: 42%;
 }
 
 /* Footer */
-
+footer h4 {
+  font-size: 1.875em;
+}
 
 /*------------------------- FAQ ----------------------------*/
 
+.faq h2 {
+  font-size: 3em;
+}
+
+.faq h4,
+.faq p {
+  font-size: 1.125em;
+  line-height: 1.125em;
+}
+
+
 /*------------------------- About ----------------------------*/
+
 .mission h2,
 .contact-section .content-wrapper h2 {
   width: 95%;
+  font-size: 3em;
+}
+
+.contact-content h4 {
+  font-size: 1.875em;
 }
 
 
