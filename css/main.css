@@ -397,7 +397,7 @@ input[type=button] {
 .map figure {
     width: 100%;
     height: 0; 
-    padding-bottom: 125%; 
+    padding-bottom: 125%; /* -- Consider changing to 56.25% -- */
     overflow: hidden;
     position: relative;
 }
@@ -687,6 +687,10 @@ footer .copyright {
   width: 45%;
 }
 
+.map figure {
+  padding-bottom: 45.5%;
+}
+
 .contact-section .content-wrapper h2 {
   width: 80%;
 }
@@ -783,6 +787,10 @@ footer h4 {
 
 
 /*------------------------- About ----------------------------*/
+
+.map figure {
+  padding-bottom: 37.5%;
+}
 
 .mission h2,
 .contact-section .content-wrapper h2 {
