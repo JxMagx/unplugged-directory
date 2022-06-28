@@ -111,6 +111,7 @@ figure {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
 }
 
 a {
@@ -236,6 +237,14 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #527158;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+footer .social-icons i {
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -653,6 +662,11 @@ footer p {
 
 footer .contact {
   margin-bottom: 0;
+}
+
+footer .social-icons {
+width: 12.5em;
+justify-content: space-between;
 }
 
 footer .copyright {
